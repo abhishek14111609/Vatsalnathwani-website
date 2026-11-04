@@ -69,41 +69,36 @@ const Preloader = ({ onComplete }) => {
             className="absolute top-0 left-0 right-0 h-1/2 bg-black"
           >
             <div className="h-full flex flex-col items-center justify-center">
-              {/* VXR Monogram SVG */}
-              <svg width="200" height="100" viewBox="0 0 200 100" className="mb-8">
-                <motion.text
-                  x="50%"
-                  y="50%"
-                  dominantBaseline="middle"
-                  textAnchor="middle"
-                  fontSize="60"
-                  fontWeight="bold"
-                  fill="none"
-                  stroke="#F5C26B"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  initial={{ strokeDasharray: '1000', strokeDashoffset: '1000' }}
-                  animate={{ strokeDasharray: '1000', strokeDashoffset: isComplete ? '1000' : '0' }}
-                  transition={{ duration: 2, ease: 'easeInOut' }}
-                  style={{ fontFamily: 'Clash Display, sans-serif' }}
-                >
-                  VXR
-                </motion.text>
-              </svg>
-
-              {/* Progress counter */}
               <motion.div
-                className="text-6xl font-heading font-bold text-gold"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
+                className="relative mb-10 flex h-32 w-32 items-center justify-center rounded-full border border-gold/30"
+                initial={{ opacity: 0, scale: 0.7, rotate: -20 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               >
-                {progress}
+                <motion.span
+                  className="absolute inset-2 rounded-full border border-dashed border-gold/60"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
+                />
+                <span className="relative z-10 font-heading text-5xl font-black tracking-[-0.12em] text-gold">VN</span>
+                <span className="absolute -right-2 top-1/2 h-2 w-2 rounded-full bg-gold" />
               </motion.div>
 
-              {/* Progress bar */}
-              <div className="w-64 h-0.5 bg-gold/20 mt-4 overflow-hidden">
+              <div className="flex w-64 items-end justify-between border-b border-gold/30 pb-3">
+                <div>
+                  <p className="font-heading text-sm font-bold uppercase tracking-[.22em] text-white">Vatsal Nathwani</p>
+                  <p className="mt-1 text-[9px] uppercase tracking-[.28em] text-white/50">Personal portfolio</p>
+                </div>
+                <motion.span
+                  className="font-mono text-3xl font-bold text-gold"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                >
+                  {String(progress).padStart(2, '0')}
+                </motion.span>
+              </div>
+
+              <div className="mt-4 h-0.5 w-64 overflow-hidden bg-gold/20">
                 <motion.div
                   className="h-full bg-gold"
                   initial={{ width: 0 }}

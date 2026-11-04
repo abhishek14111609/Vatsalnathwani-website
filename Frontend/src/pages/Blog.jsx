@@ -1,6 +1,7 @@
 import SectionHeading from '../components/ui/SectionHeading';
 import Card from '../components/ui/Card';
 import Tag from '../components/ui/Tag';
+import ImageFrame from '../components/ui/ImageFrame';
 
 const Blog = () => {
   const blogPosts = [
@@ -44,12 +45,11 @@ const Blog = () => {
           {blogPosts.map((post, index) => (
             <Card key={index} hover glass className="h-full">
               <div className="aspect-video rounded-xl overflow-hidden mb-6 bg-black-light">
-                <img
+                <ImageFrame
                   src={post.coverImage}
                   alt={post.title}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover"
                 />
               </div>
 

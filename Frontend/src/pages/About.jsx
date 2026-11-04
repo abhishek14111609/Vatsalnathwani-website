@@ -1,5 +1,6 @@
 import SectionHeading from '../components/ui/SectionHeading';
 import Card from '../components/ui/Card';
+import ImageFrame from '../components/ui/ImageFrame';
 
 const About = () => {
   return (
@@ -14,12 +15,11 @@ const About = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-16">
           <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-gold/20">
-            <img
-              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=professional%20editorial%20portrait%20of%20a%20confident%20young%20Indian%20businessman%20in%20a%20tailored%20dark%20suit%2C%20dramatic%20low-key%20studio%20lighting%20with%20warm%20golden%20rim%20light%2C%20dark%20charcoal%20background%2C%20cinematic%2C%20premium%20magazine%20cover%20style%2C%20photorealistic&image_size=portrait_4_3"
-              alt="Vatsal Nathwani"
+            <ImageFrame
+              src="/brand/vatsal-nathwani.jpg"
+              alt="Portrait of Vatsal Nathwani"
               loading="lazy"
               decoding="async"
-              className="w-full h-full object-cover"
             />
           </div>
 

@@ -57,10 +57,10 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <span className="text-3xl font-heading font-bold text-gold">VXR</span>
-              <span className="text-base font-body text-ivory/70">MEDIA</span>
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-gold font-heading text-sm font-black tracking-[-0.1em] text-black">VN</span>
+              <span className="text-base font-body font-bold uppercase tracking-[.14em] text-ivory">Vatsal Nathwani</span>
             </div>
-            <p className="text-ivory/60 font-body text-sm leading-relaxed">
+            <p className="text-ivory/75 font-body text-sm leading-relaxed">
               Building iconic experiences and shaping the future of media, events, and real estate.
             </p>
           </div>
@@ -86,13 +86,13 @@ const Footer = () => {
           <div>
             <h3 className="font-heading font-semibold text-ivory mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-ivory/60 text-sm font-body">
+              <li className="text-ivory/75 text-sm font-body">
                 hello@vxrmedia.in
               </li>
-              <li className="text-ivory/60 text-sm font-body">
+              <li className="text-ivory/75 text-sm font-body">
                 +91 98765 43210
               </li>
-              <li className="text-ivory/60 text-sm font-body">
+              <li className="text-ivory/75 text-sm font-body">
                 Mumbai, India
               </li>
             </ul>
@@ -121,7 +121,7 @@ const Footer = () => {
         {/* Bottom bar */}
         <div className="mt-12 pt-8 border-t border-gold/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-ivory/40 text-sm font-body">
-            © {currentYear} VXR Media Pvt Ltd. All rights reserved.
+            © {currentYear} Vatsal Nathwani. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-ivory/40 hover:text-gold text-sm font-body transition-colors">
